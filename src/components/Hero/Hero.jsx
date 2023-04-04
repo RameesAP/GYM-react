@@ -12,6 +12,8 @@ const Hero = () => {
 
     const transition = { type: 'spring', duration: 3 }
 
+    const mobile = window.innerWidth <= 768 ? true : false
+
     return (
         <div className="hero">
             <div className="blur hero-blur"></div>
@@ -20,9 +22,9 @@ const Hero = () => {
                 {/* the thes ad */}
                 <div className="the-best-ad">
                     <motion.div
-                    initial={{left:'238px'}}
-                    whileInView={{left:'8px'}}
-                    transition={{...transition,type:'tween'}}
+                        initial={{ left: mobile ? "165px" : "238px" }}
+                        whileInView={{ left: '8px' }}
+                        transition={{ ...transition, type: 'tween' }}
                     >
 
                     </motion.div>
@@ -68,10 +70,10 @@ const Hero = () => {
                 <button className='btn'>Join Now</button>
 
                 <motion.div
-                initial={{right:"-1rem"}}
-                whileInView={{right:"4rem"}}
-                transition={transition}
-                className="heart-rate">
+                    initial={{ right: "-1rem" }}
+                    whileInView={{ right: "4rem" }}
+                    transition={transition}
+                    className="heart-rate">
                     <img src={Heart} alt="" />
                     <span>Heart Rate</span>
                     <span>116 bpm</span>
@@ -79,18 +81,18 @@ const Hero = () => {
 
                 {/* hero images */}
                 <img src={hero_image} alt="" className='hero-image' />
-                <motion.img 
-                initial={{right:"11rem"}}
-                whileInView={{right:"20rem"}}
-                transition={transition}
-                src={hero_image_back} alt="" className='hero-image-back' />
+                <motion.img
+                    initial={{ right: "11rem" }}
+                    whileInView={{ right: "20rem" }}
+                    transition={transition}
+                    src={hero_image_back} alt="" className='hero-image-back' />
 
                 {/* calories */}
                 <motion.div
-                initial={{right:"37rem"}}
-                whileInView={{right:"28rem"}}
-                transition={transition}
-                className='calories'>
+                    initial={{ right: "37rem" }}
+                    whileInView={{ right: "28rem" }}
+                    transition={transition}
+                    className='calories'>
                     <img src={Calories} alt="" />
                     <div>
                         <span>CaloriesBurned</span>

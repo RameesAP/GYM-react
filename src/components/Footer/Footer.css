@@ -13,11 +13,11 @@
     justify-content: center;
     height: 20rem;
 }
-.social-links{
+.social-links>div{
     display: flex;
     gap: 4rem;
 }
-.social-links>img{
+.social-links>div>a>img{
     width: 2rem;
     height: 2rem;
     cursor: pointer;
