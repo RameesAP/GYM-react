@@ -6,14 +6,20 @@ import hero_image_back from '../../assets/hero_image_back.png'
 import Heart from '../../assets/heart.png'
 import Calories from '../../assets/calories.png'
 
+import {motion} from 'framer-motion'
+
 const Hero = () => {
+
+
+    
     return (
         <div className="hero">
+            <div className="blur hero-blur"></div>
             <div className="left-h">
                 <Header />
                 {/* the thes ad */}
                 <div className="the-best-ad">
-                    <div></div>
+                    <motion.div></motion.div>
                     <span>The best fitness club in the town</span>
                 </div>
                 {/* Hero heading */}
